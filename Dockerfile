@@ -2,11 +2,11 @@ FROM node:latest
 
 EXPOSE 3000
 
-copy ./src /src/
+COPY ./src /src/
 
 
 WORKDIR /src/
 
 RUN npm install
 
-CMD /src/start.sh
+CMD [ "/src/start.sh" ]
